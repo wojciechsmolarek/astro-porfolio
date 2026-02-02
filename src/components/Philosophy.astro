@@ -1,0 +1,75 @@
+---
+// Philosophy section component
+---
+
+<section
+    class="py-32 px-6 md:px-12 bg-[#111] text-[#f4f4f4] relative overflow-hidden"
+>
+    {/* Abstract Background Shapes */}
+    <div
+        class="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none"
+    >
+        <div
+            class="w-full h-full border-l border-white/20 transform skew-x-12 ml-20"
+        >
+        </div>
+        <div
+            class="w-full h-full border-l border-white/20 transform skew-x-12 ml-40 absolute top-0"
+        >
+        </div>
+    </div>
+
+    <div class="max-w-4xl mx-auto relative z-10">
+        <span
+            class="block font-mono text-xs mb-8 tracking-widest uppercase text-white/50"
+        >
+            Filozofia
+        </span>
+        <p
+            class="font-display text-3xl md:text-5xl lg:text-6xl leading-tight font-medium mb-16"
+        >
+            Google nie czyta stron jak ludzie.{" "}
+            <span class="text-white/40">
+                Tłumaczę Twój biznes na język, który algorytmy nagradzają,
+                zamieniając bariery techniczne w wymierną przewagę
+                konkurencyjną.
+            </span>
+        </p>
+
+        <div
+            class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 border-t border-white/10 pt-12"
+        >
+            {
+                [
+                    { val: "150%", label: "Wzrost widoczności" },
+                    { val: "0.5s", label: "Czas ładowania" },
+                    { val: "100+", label: "Audytów" },
+                    { val: "99", label: "Wynik Lighthouse" },
+                ].map((item) => (
+                    <div>
+                        <span class="block text-4xl font-display font-bold mb-2">
+                            {item.val}
+                        </span>
+                        <span class="text-xs font-mono text-white/60 uppercase">
+                            {item.label}
+                        </span>
+                    </div>
+                ))
+            }
+        </div>
+
+        <div class="mt-20 text-center md:text-left interactive">
+            <a href="#contact" class="inline-flex items-center gap-4 group">
+                <span
+                    class="w-16 h-16 rounded-full border border-white/30 flex items-center justify-center group-hover:bg-white group-hover:text-black transition-all duration-300"
+                >
+                    <span class="material-symbols-outlined">arrow_downward</span
+                    >
+                </span>
+                <span class="uppercase tracking-widest text-sm font-bold"
+                    >Rozpocznijmy rozmowę</span
+                >
+            </a>
+        </div>
+    </div>
+</section>

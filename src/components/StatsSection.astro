@@ -1,0 +1,60 @@
+---
+import type { StatItem } from "../types";
+
+const stats: StatItem[] = [
+    {
+        value: "-7%",
+        label: "Spadek Konwersji",
+        description:
+            "Każda sekunda opóźnienia w ładowaniu strony to bezpośrednia strata przychodu.",
+    },
+    {
+        value: "80%",
+        label: "Błędy Architektury",
+        description:
+            "Większość problemów z indeksacją wynika ze źle zaplanowanej struktury technicznej.",
+    },
+    {
+        value: "3x",
+        label: "Zwrot z Inwestycji",
+        description:
+            "Techniczne SEO to jednorazowa inwestycja, która procentuje latami bez kosztów za kliknięcie.",
+    },
+];
+---
+
+<section class="py-32 px-6 md:px-12 bg-[#0a0a0a] text-[#f4f4f4]">
+    <div class="max-w-7xl mx-auto">
+        <div
+            class="flex flex-col md:flex-row justify-between items-start md:items-end mb-20 border-b border-white/20 pb-8"
+        >
+            <h2
+                class="font-display text-4xl md:text-6xl font-bold uppercase tracking-tighter"
+            >
+                Dlaczego techniczne SEO?
+            </h2>
+            <p
+                class="font-mono text-xs mt-4 md:mt-0 uppercase tracking-widest opacity-60 text-right"
+            >
+                Dane nie kłamią
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
+            {
+                stats.map((stat) => (
+                    <div class="group interactive">
+                        <div class="text-5xl md:text-7xl font-display font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-500">
+                            {stat.value}
+                        </div>
+                        <div class="h-px w-12 bg-white/30 mb-6 group-hover:w-full transition-all duration-500" />
+                        <h3 class="font-bold text-lg mb-2">{stat.label}</h3>
+                        <p class="text-white/60 text-sm leading-relaxed">
+                            {stat.description}
+                        </p>
+                    </div>
+                ))
+            }
+        </div>
+    </div>
+</section>

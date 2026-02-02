@@ -14,8 +14,8 @@ const { title, description, ogImage } = Astro.props;
 ---
 
 <BaseLayout title={title} description={description} ogImage={ogImage}>
-    <Cursor client:load />
-    <Navbar client:load currentPath={Astro.url.pathname} />
+    <Cursor client:idle />
+    <Navbar client:idle currentPath={Astro.url.pathname} />
     <slot />
     <Footer />
 </BaseLayout>

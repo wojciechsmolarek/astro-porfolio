@@ -13,4 +13,10 @@ export default defineConfig({
     })
   ],
   output: 'static',
+  vite: {
+    build: {
+      minify: 'esbuild',
+      cssMinify: true,
+    },
+  },
 });

@@ -9,20 +9,25 @@
     <div
         class="absolute right-[-20px] md:right-0 lg:right-[5%] top-1/2 -translate-y-1/2 w-[280px] md:w-[380px] lg:w-[480px] aspect-[3/4] z-0 pointer-events-none opacity-90 transition-all duration-500"
     >
-        <img
-            alt="Wojciech Smolarek - Technical SEO Specialist z Warszawy"
-            class="w-full h-full object-cover mix-blend-multiply brightness-110 contrast-100"
-            style={{
-                maskImage:
-                    "linear-gradient(to bottom, black 80%, transparent 100%)",
-                WebkitMaskImage:
-                    "linear-gradient(to bottom, black 80%, transparent 100%)",
-            }}
-            src="/wojciech-hero.png"
-            loading="eager"
-            width="480"
-            height="640"
-        />
+        <picture>
+            <source srcset="/wojciech-hero.avif" type="image/avif" />
+            <source srcset="/wojciech-hero.webp" type="image/webp" />
+            <img
+                alt="Wojciech Smolarek - Technical SEO Specialist z Warszawy"
+                class="w-full h-full object-cover mix-blend-multiply brightness-110 contrast-100"
+                style={{
+                    maskImage:
+                        "linear-gradient(to bottom, black 80%, transparent 100%)",
+                    WebkitMaskImage:
+                        "linear-gradient(to bottom, black 80%, transparent 100%)",
+                }}
+                src="/wojciech-hero.png"
+                loading="eager"
+                fetchpriority="high"
+                width="480"
+                height="640"
+            />
+        </picture>
     </div>
 
     {/* Vertical Text */}

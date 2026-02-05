@@ -1,60 +1,86 @@
 ---
+import Icon from "./Icon.astro";
 // Footer component - static Astro component
 ---
 
-<footer
-    class="pt-32 pb-12 px-6 md:px-12 bg-secondary min-h-screen flex flex-col justify-between"
-    id="contact"
->
-    <div>
-        <div class="max-w-6xl">
-            <h2
-                class="text-[clamp(2.5rem,8vw,8rem)] font-display font-bold uppercase tracking-tighter mb-8 leading-[0.9]"
+<footer class="pt-24 md:pt-32 pb-12 px-6 md:px-12 bg-secondary" id="contact">
+    <div class="max-w-7xl mx-auto">
+        <!-- Main CTA Section -->
+        <div class="max-w-4xl mb-20">
+            <p
+                class="font-mono text-xs uppercase tracking-widest mb-6 text-gray-600"
             >
-                ZOPTYMALIZUJMY<br />TWÓJ BIZNES
+                Skontaktuj się
+            </p>
+            <h2
+                class="font-display text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-[0.95]"
+            >
+                Zoptymalizuję<br />Twój Biznes
             </h2>
-            <div class="flex flex-col md:flex-row gap-8 md:gap-16 mt-16">
+            <p
+                class="text-lg md:text-xl text-gray-700 max-w-2xl leading-relaxed mb-12"
+            >
+                Zwiększ widoczność, popraw wydajność i zacznij generować więcej
+                ruchu organicznego.
+            </p>
+
+            <!-- CTA Buttons -->
+            <div class="flex flex-col sm:flex-row gap-6">
                 <a
                     href="mailto:kontakt@wojciechsmolarek.pl"
-                    class="text-xl md:text-2xl border-b border-black pb-1 hover:opacity-50 transition-all inline-block font-medium interactive"
+                    class="group inline-flex items-center justify-center gap-3 bg-black text-white px-8 py-4 rounded-full hover:bg-black/90 transition-all font-medium interactive"
                 >
-                    Napisz do mnie
+                    <Icon name="alternate_email" class="w-5 h-5" />
+                    <span>Napisz do mnie</span>
                 </a>
                 <a
                     href="/kontakt"
-                    class="text-xl md:text-2xl border-b border-black pb-1 hover:opacity-50 transition-all inline-block font-medium interactive"
+                    class="group inline-flex items-center justify-center gap-3 border-2 border-black px-8 py-4 rounded-full hover:bg-black hover:text-white transition-all font-medium interactive"
                 >
-                    Umów audyt
+                    <span>Umów audyt</span>
+                    <Icon
+                        name="arrow_forward"
+                        class="w-5 h-5 group-hover:translate-x-1 transition-transform"
+                    />
                 </a>
             </div>
         </div>
-    </div>
 
-    <div
-        class="mt-32 border-t border-black/10 pt-8 flex flex-col md:flex-row justify-between items-end md:items-center gap-8"
-    >
-        <div class="flex gap-6">
-            {
-                ["code", "alternate_email", "link"].map((icon) => (
-                    <a
-                        href="#"
-                        class="w-10 h-10 border border-black/20 rounded-full flex items-center justify-center hover:bg-black hover:text-white transition-colors interactive"
-                    >
-                        <span class="material-symbols-outlined text-sm">
-                            {icon}
-                        </span>
-                    </a>
-                ))
-            }
-        </div>
+        <!-- Footer Bottom -->
         <div
-            class="flex flex-col md:flex-row gap-8 md:gap-12 text-sm font-mono text-gray-500 uppercase tracking-tight text-right"
+            class="border-t border-black/10 pt-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-8"
         >
-            <p>© 2026 Wojciech Smolarek</p>
-            <p>Warszawa, PL</p>
-            <p class="hidden md:block">
-                Czas Lokalny: <span id="time">--:--</span>
-            </p>
+            <!-- Social Links -->
+            <div class="flex gap-4">
+                {
+                    [
+                        { icon: "code", label: "GitHub" },
+                        { icon: "alternate_email", label: "Email" },
+                        { icon: "link", label: "LinkedIn" },
+                    ].map((item) => (
+                        <a
+                            href="#"
+                            aria-label={item.label}
+                            class="w-12 h-12 border border-black/20 rounded-full flex items-center justify-center hover:bg-black hover:text-white hover:border-black transition-all interactive"
+                        >
+                            <Icon name={item.icon} class="w-5 h-5" />
+                        </a>
+                    ))
+                }
+            </div>
+
+            <!-- Footer Info -->
+            <div
+                class="flex flex-col md:flex-row gap-6 md:gap-12 text-sm font-mono text-gray-600 uppercase tracking-tight"
+            >
+                <p>© 2026 Wojciech Smolarek</p>
+                <p>Warszawa, PL</p>
+                <p class="hidden md:block">
+                    Czas: <span id="time" class="text-black font-semibold"
+                        >--:--</span
+                    >
+                </p>
+            </div>
         </div>
     </div>
 </footer>

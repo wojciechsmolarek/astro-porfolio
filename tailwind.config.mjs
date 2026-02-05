@@ -1,3 +1,5 @@
+import defaultTheme from 'tailwindcss/defaultTheme'
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
@@ -10,9 +12,9 @@ export default {
         accent: '#333',
       },
       fontFamily: {
-        sans: ['Manrope', 'sans-serif'],
-        display: ['Syne', 'sans-serif'],
-        mono: ['Space Grotesk', 'monospace'],
+        sans: ['Manrope', ...defaultTheme.fontFamily.sans],
+        display: ['Syne', ...defaultTheme.fontFamily.sans],
+        mono: ['Space Grotesk', ...defaultTheme.fontFamily.mono],
       },
       animation: {
         'marquee': 'marquee 30s linear infinite',

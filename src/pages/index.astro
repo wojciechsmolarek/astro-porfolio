@@ -5,6 +5,7 @@ import ServicesHighlight from "../components/ServicesHighlight.astro";
 import StatsSection from "../components/StatsSection.astro";
 import Expertise from "../components/Expertise.astro";
 import Philosophy from "../components/Philosophy.astro";
+import Icon from "../components/Icon.astro";
 import type { TechItem } from "../types";
 
 const techStack: TechItem[] = [
@@ -91,9 +92,7 @@ const techStack: TechItem[] = [
 			<div
 				class="max-w-6xl mx-auto flex flex-col items-center text-center"
 			>
-				<span class="material-symbols-outlined text-6xl opacity-10 mb-8"
-					>format_quote</span
-				>
+				<Icon name="format_quote" class="w-16 h-16 opacity-10 mb-8" />
 				<p
 					class="font-display text-3xl md:text-5xl font-medium leading-tight mb-12 max-w-4xl"
 				>
@@ -137,9 +136,7 @@ const techStack: TechItem[] = [
 					{
 						techStack.map((tech) => (
 							<span class="font-display font-bold text-xl flex items-center gap-2 interactive">
-								<span class="material-symbols-outlined">
-									{tech.icon}
-								</span>{" "}
+								<Icon name={tech.icon} class="w-6 h-6" />{" "}
 								{tech.name}
 							</span>
 						))

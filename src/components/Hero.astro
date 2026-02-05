@@ -1,4 +1,5 @@
 ---
+import Icon from "./Icon.astro";
 // Hero section component
 ---
 
@@ -34,12 +35,12 @@
     <div
         class="absolute left-6 md:left-10 top-1/2 -translate-y-1/2 hidden lg:block z-20"
     >
-        <h2
+        <div
             class="rotate-180 [writing-mode:vertical-rl] font-mono text-xs uppercase tracking-[0.3em] text-gray-600 mix-blend-difference"
         >
             Specjalista Technical SEO <span class="my-4 inline-block">//</span> Data
             Driven
-        </h2>
+        </div>
     </div>
 
     {/* Main Headline */}
@@ -47,15 +48,11 @@
         class="relative z-10 pointer-events-none select-none mix-blend-normal max-w-full md:max-w-[50vw] lg:max-w-[65vw]"
     >
         <h1
-            class="text-[clamp(3rem,10vw,10rem)] font-display font-bold leading-[0.9] tracking-tighter text-primary drop-shadow-sm mb-2 md:mb-4"
-        >
-            WOJCIECH
-        </h1>
-        <h1
             class="text-[clamp(3rem,10vw,10rem)] font-display font-bold leading-[0.9] tracking-tighter text-primary drop-shadow-sm"
         >
-            SMOLAREK
+            WOJCIECH<br />SMOLAREK
         </h1>
+        <p class="sr-only">Technical SEO Specialist - Warszawa</p>
     </div>
 
     {/* Intro Text */}
@@ -81,6 +78,6 @@
     <div
         class="absolute bottom-12 left-6 md:left-12 lg:left-32 animate-bounce-slow"
     >
-        <span class="material-symbols-outlined text-3xl font-thin">south</span>
+        <Icon name="south" class="w-8 h-8" />
     </div>
 </header>

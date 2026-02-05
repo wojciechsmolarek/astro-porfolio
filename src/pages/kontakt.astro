@@ -1,5 +1,6 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import Icon from "../components/Icon.astro";
 ---
 
 <MainLayout
@@ -97,10 +98,10 @@ import MainLayout from "../layouts/MainLayout.astro";
                         class="font-mono uppercase tracking-widest text-sm font-bold"
                         >Wyślij Zgłoszenie</span
                     >
-                    <span
-                        class="material-symbols-outlined group-hover:translate-x-1 transition-transform"
-                        >arrow_forward</span
-                    >
+                    <Icon
+                        name="arrow_forward"
+                        class="w-5 h-5 group-hover:translate-x-1 transition-transform"
+                    />
                 </button>
             </form>
 
